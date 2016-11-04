@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "owl:Thing" "wicus-hwspecs:Storage" "wicus-hwspecs:Network" "wicus-hwspecs:Memory" "wicus-hwspecs:HardwareComponent" "wicus-hwspecs:CPU" ; /*classes style*/
+	"wicus-hwspecs:HardwareComponent" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"wicus-hwspecs:CPU" -> "wicus-hwspecs:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"wicus-hwspecs:Network" -> "wicus-hwspecs:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"wicus-hwspecs:Storage" -> "wicus-hwspecs:HardwareComponent" [ label = "rdfs:subClassOf" ];
+	"wicus-hwspecs:Memory" -> "wicus-hwspecs:HardwareComponent" [ label = "rdfs:subClassOf" ];
+
+}

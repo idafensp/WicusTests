@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "wstack:ConfigurationInfo" "wstack:SoftwareComponent" "wstack:SoftwareStack" "wstack:DeploymentStep" "wstack:Version" "wstack:SoftwareBinary" "wstack:OpenLicense" "wstack:License" "wstack:ConfigurationParameter" "wstack:DeploymentScript" "wstack:NotOpenLicense" "wstack:DeploymentPlan" ; /*classes style*/
+	"wstack:isDeploymentStepOf" -> "p-plan:isStepOfPlan" [ label = "rdfs:subPropertyOf" ];
+	"wstack:requiresVersion" -> "terms:requires" [ label = "rdfs:subPropertyOf" ];
+	"wstack:isConfigurationParameterOf" -> "p-plan:isInputVarOf" [ label = "rdfs:subPropertyOf" ];
+	"wstack:requiresHigherVersion" -> "wstack:requiresVersion" [ label = "rdfs:subPropertyOf" ];
+	"wstack:requiresLowerVersion" -> "wstack:requiresVersion" [ label = "rdfs:subPropertyOf" ];
+	"wstack:NotOpenLicense" -> "wstack:OpenLicense" [ label = "owl:disjointWith" ];
+	"wstack:DeploymentStep" -> "wstack:DeploymentStep" [ label = "wstack:nextStep" ];
+	"wstack:DeploymentStep" -> "wstack:DeploymentScript" [ label = "wstack:hasDeploymentScript" ];
+	"wstack:Version" -> "wstack:Version" [ label = "wstack:higher" ];
+	"wstack:SoftwareBinary" -> "rdfs:Literal" [ label = "wstack:binary" ];
+	"wstack:SoftwareComponent" -> "wstack:License" [ label = "wstack:hasLicense" ];
+	"wstack:DeploymentScript" -> "rdfs:Literal" [ label = "wstack:script" ];
+	"wstack:SoftwareStack" -> "wstack:SoftwareComponent" [ label = "wstack:hasSoftwareComponent" ];
+	"wstack:SoftwareStack" -> "wstack:SoftwareStack" [ label = "wstack:dependsOn" ];
+	"wstack:Version" -> "rdfs:Literal" [ label = "wstack:versionNumber" ];
+	"wstack:SoftwareComponent" -> "wstack:SoftwareComponent" [ label = "wstack:nextComponent" ];
+	"wstack:DeploymentStep" -> "wstack:ConfigurationInfo" [ label = "wstack:hasDeploymentInfo" ];
+	"wstack:SoftwareComponent" -> "wstack:Version" [ label = "wstack:hasVersion" ];
+	"wstack:DeploymentStep" -> "wstack:DeploymentPlan" [ label = "wstack:isDeploymentStepOf" ];
+	"wstack:Version" -> "wstack:Version" [ label = "wstack:lower" ];
+	"wstack:SoftwareComponent" -> "wstack:ConfigurationInfo" [ label = "wstack:hasConfigurationInfo" ];
+	"wstack:ConfigurationParameter" -> "rdfs:Literal" [ label = "wstack:parameterValue" ];
+	"wstack:SoftwareComponent" -> "wstack:SoftwareBinary" [ label = "wstack:hasBinary" ];
+	"wstack:ConfigurationParameter" -> "rdfs:Literal" [ label = "wstack:parameterName" ];
+	"wstack:SoftwareComponent" -> "wstack:Version" [ label = "wstack:requiresVersion" ];
+	"wstack:DeploymentPlan" -> "wstack:SoftwareComponent" [ label = "wstack:isDeploymentPlanOf" ];
+	"wstack:ConfigurationParameter" -> "wstack:ConfigurationInfo" [ label = "wstack:isConfigurationParameterOf" ];
+
+}

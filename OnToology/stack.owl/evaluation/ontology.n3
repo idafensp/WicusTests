@@ -1,0 +1,152 @@
+<http://purl.org/net/wicus-stack#License> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:License represents the licensing conditions under which a software component can be used."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#isDeploymentStepOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#isDeploymentStepOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#DeploymentPlan> .
+<http://purl.org/net/wicus-stack#isDeploymentStepOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/p-plan#isStepOfPlan> .
+<http://purl.org/net/wicus-stack#isDeploymentStepOf> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:isDeploymentStepOf is a specific type of p-plan:isStepOfPlan linking a wstack:DeploymentStep to the wstack:DeploymentPaln that it belongs to."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#isDeploymentStepOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#isDeploymentPlanOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#isDeploymentPlanOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentPlan> .
+<http://purl.org/net/wicus-stack#isDeploymentPlanOf> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasSoftwareComponent links a wstack:DeploymentPlan to its corresponding wstack:SofwareComponent."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#isDeploymentPlanOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#requiresLowerVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/wicus-stack#requiresVersion> .
+<http://purl.org/net/wicus-stack#requiresLowerVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:requiresVersion links a wstack:SoftwareComponent to the maximun  wstack:Version required by this component on the context of a workflow. A wstack:SoftwareComponent then required the defined wstack:Version or a lower one." .
+<http://purl.org/net/wicus-stack#requiresLowerVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#DeploymentStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:DeploymentSetp is a specific type of p-plan:Step. It represents an action that must be performed in order to deploy a software component."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#DeploymentStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Step> .
+<http://purl.org/net/wicus-stack#DeploymentStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#hasDeploymentScript> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#hasDeploymentScript> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#DeploymentScript> .
+<http://purl.org/net/wicus-stack#hasDeploymentScript> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasDeploymentScript links a wstack:DeploymentStep to a wstack:DeploymentScript that is invoked for executing the deployment step."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasDeploymentScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/wicus-stack#hasDeploymentScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#OpenLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:OpenLincense represents licenses that allow a software component to be used by any user."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#OpenLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#License> .
+<http://purl.org/net/wicus-stack#OpenLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#ConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:ConfigurationInfo represents the input information for deploying and configuring a software component."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#ConfigurationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#isInputVarOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#hasSoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareStack> .
+<http://purl.org/net/wicus-stack#hasSoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#hasSoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasSoftwareComponent links a wstack:SoftwareStack to one or more wstack:SofwareComponent that composes the stack."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasSoftwareComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#DeploymentScript> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:DeploymentScript represents an executable process that is performed in order to carry out a deployment step."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#DeploymentScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#requiresHigherVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/wicus-stack#requiresVersion> .
+<http://purl.org/net/wicus-stack#requiresHigherVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:requiresVersion links a wstack:SoftwareComponent to the minimun  wstack:Version required by this component on the context of a workflow. A wstack:SoftwareComponent then required the defined wstack:Version or a higher one." .
+<http://purl.org/net/wicus-stack#requiresHigherVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#isConfigurationParameterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#ConfigurationParameter> .
+<http://purl.org/net/wicus-stack#isConfigurationParameterOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+<http://purl.org/net/wicus-stack#isConfigurationParameterOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/p-plan#isInputVarOf> .
+<http://purl.org/net/wicus-stack#isConfigurationParameterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:isConfigurationParameterOf is a specific type of p-plan:isInputVarOf linking a wstack:ConfigurationParameter to the wstack:ConfigurationInformation that it belongs to."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#isConfigurationParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/terms/modified> "2013-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-stack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/terms/description> "The WICUS Software Stack ontology have been developed to describe the software elements of a computational resource. These descriptions can be used to describe both, the already deployed software components and the software requiremens of a workflow. This ontology is part of the WICUS Ontology network." .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/elements/1.1/title> "The WICUS Software Stack ontology"@en .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/elements/1.1/creator> "http://delicias.dia.fi.upm.es/~isantana/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-stack> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/wicus-stack#" .
+<http://purl.org/net/wicus-stack> <http://purl.org/dc/terms/created> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus-stack> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+<http://purl.org/net/wicus-stack> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wstack" .
+<http://purl.org/net/wicus-stack#hasDeploymentInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#hasDeploymentInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+<http://purl.org/net/wicus-stack#hasDeploymentInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasDeploymentInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the input values for executing a deployment step."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasDeploymentInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#hasLicense> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#hasLicense> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#License> .
+<http://purl.org/net/wicus-stack#hasLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasLicense links a wstack:SoftwareComponent to its corresponding wstack:License"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#Version> <http://www.w3.org/2000/01/rdf-schema#comment> "A wicussstack:Version represents a concrete version of a software component."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#Version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#SoftwareBinary> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:SoftwareBinary represents an executable and machine readable file that can be run by a computer, virtual machine or interpreter."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#SoftwareBinary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#higher> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#higher> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#higher> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:higher links a wstack:Version to another one that is lower than the first one."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#higher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://purl.org/net/wicus-stack#higher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#nextStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#nextStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#nextStep> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:nextStep specifies the invocation order of two wstack:DeploymentStep."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#nextStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/wicus-stack#nextStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#requiresVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#requiresVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#requiresVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/requires> .
+<http://purl.org/net/wicus-stack#requiresVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:requiresVersion links a wstack:SoftwareComponent to the wstack:Version required by this component on the context of a workflow." .
+<http://purl.org/net/wicus-stack#requiresVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#hasConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#hasConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+<http://purl.org/net/wicus-stack#hasConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasConfigurationInfo links a wstack:SoftwareComponent to a wstack:ConfigurationInfo representing the information for configuring it."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasConfigurationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#binary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#binary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareBinary> .
+<http://purl.org/net/wicus-stack#binary> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:binary defines the location of the binary package of a wstack:SoftwareComponent"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/wicus-stack#parameterValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#parameterValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#ConfigurationParameter> .
+<http://purl.org/net/wicus-stack#parameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:parameterValue defines the value of a parameter."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#parameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#dependsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareStack> .
+<http://purl.org/net/wicus-stack#dependsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareStack> .
+<http://purl.org/net/wicus-stack#dependsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:dependsOn links a wstack:SoftwareStack to another wstack:SoftwareStack that is necessary for deploying and running the first one."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#dependsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#hasBinary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#hasBinary> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareBinary> .
+<http://purl.org/net/wicus-stack#hasBinary> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasBinary links a wstack:SoftwareComponent to its corresponding wstack:SoftwareBinary."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasBinary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#nextComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#nextComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#nextComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:nextComponent specifies the deployment order of two wstack:SoftwareComponent."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#nextComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#DeploymentPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:DeploymentPlan is a specific type of p-plan:Plan. It aggregates the set of steps to be performed in order to deploy a software component."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#DeploymentPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/wicus-stack#DeploymentPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#lower> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/net/wicus-stack#higher> .
+<http://purl.org/net/wicus-stack#lower> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#lower> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#lower> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:lower links a wstack:Version to another one that is higher than the first one."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#lower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#SoftwareStack> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:SoftwareStack represents a set of software components that support the execution of a certain set of tasks of a workflow."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#SoftwareStack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasVersion links a wstack:SoftwareComponent to the its wstack:Version"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#NotOpenLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:NotOpenLicense represents the set of licenses that restricts the usage of a software component, subject to certain conditions."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#NotOpenLicense> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/wicus-stack#OpenLicense> .
+<http://purl.org/net/wicus-stack#NotOpenLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#License> .
+<http://purl.org/net/wicus-stack#NotOpenLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#SoftwareComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:SoftwareComponent represents a software entity that can be deployed in a computational resource."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#SoftwareComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#versionNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#versionNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#Version> .
+<http://purl.org/net/wicus-stack#versionNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:versionNumer defines the identifier of a version, usually as a numeric value, and sometimes a code name or an acronym."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#versionNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/net/wicus-stack#script> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#script> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentScript> .
+<http://purl.org/net/wicus-stack#script> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:script defines the name and/or location of and script."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#script> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#parameterName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#parameterName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#ConfigurationParameter> .
+<http://purl.org/net/wicus-stack#parameterName> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:parameterName defines the name of a parameter, that is, the symbolic name or identifier of a stored value."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#parameterName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-stack#ConfigurationParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A wstack:ConfigurationParameter is a specific type of p-plan:Variable. It represents a piece of the configuration information of a deployment step."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#ConfigurationParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Variable> .
+<http://purl.org/net/wicus-stack#ConfigurationParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

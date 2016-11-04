@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "wicus-sva:VMImage" "wicus-sva:ScientificVirtualAppliance" "wicus-sva:InfrastructureProvider" "wicus-sva:ImageAppliance" ; /*classes style*/
+	"wicus-sva:VMImage" -> "rdfs:Literal" [ label = "wicus-sva:vmId" ];
+	"wicus-sva:ScientificVirtualAppliance" -> "wicus-sva:ImageAppliance" [ label = "wicus-sva:isSupportedBy" ];
+	"wicus-sva:ImageAppliance" -> "wicus-sva:InfrastructureProvider" [ label = "wicus-sva:providedBy" ];
+	"wicus-sva:ImageAppliance" -> "wicus-sva:VMImage" [ label = "wicus-sva:hasVMImage" ];
+
+}

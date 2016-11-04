@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "p-plan:Step" "wicus-reqs:AbstractWorkflow" "wicus-reqs:SoftwareRequirements" "wicus-reqs:WorkflowStep" "wicus-reqs:HardwareRequirements" "wicus-reqs:ExecutionEnvironment" "owl:Thing" "wicus-reqs:ConcreteWorkflow" "p-plan:Plan" "wicus-reqs:Workflow" ; /*classes style*/
+	"wicus-reqs:SoftwareRequirements" -> "wicus-reqs:ExecutionEnvironment" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:ExecutionEnvironment" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:WorkflowStep" -> "p-plan:Step" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:Workflow" -> "p-plan:Plan" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:HardwareRequirements" -> "wicus-reqs:ExecutionEnvironment" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:ConcreteWorkflow" -> "wicus-reqs:Workflow" [ label = "rdfs:subClassOf" ];
+	"wicus-reqs:AbstractWorkflow" -> "wicus-reqs:Workflow" [ label = "rdfs:subClassOf" ];
+
+}

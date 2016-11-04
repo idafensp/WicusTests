@@ -1,0 +1,91 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "ExecutionEnvironment" : {
+      "@id" : "http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasSubworkflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#hasSubworkflow",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "SoftwareRequirements" : {
+      "@id" : "http://purl.org/net/wicus-reqs#SoftwareRequirements"
+    },
+    "isStepOfWorkflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#isStepOfWorkflow",
+      "@type" : "@id"
+    },
+    "WorkflowStep" : {
+      "@id" : "http://purl.org/net/wicus-reqs#WorkflowStep"
+    },
+    "hasConcreteWorkflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#hasConcreteWorkflow",
+      "@type" : "@id"
+    },
+    "AbstractWorkflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#AbstractWorkflow"
+    },
+    "Step" : {
+      "@id" : "http://purl.org/net/p-plan#Step"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "requiresExecutionEnvironment" : {
+      "@id" : "http://purl.org/net/wicus-reqs#requiresExecutionEnvironment",
+      "@type" : "@id"
+    },
+    "isStepOfPlan" : {
+      "@id" : "http://purl.org/net/p-plan#isStepOfPlan",
+      "@type" : "@id"
+    },
+    "RequirementLevel" : {
+      "@id" : "http://purl.org/net/wicus-reqs#RequirementLevel"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Plan" : {
+      "@id" : "http://purl.org/net/p-plan#Plan"
+    },
+    "Workflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#Workflow"
+    },
+    "HardwareRequirements" : {
+      "@id" : "http://purl.org/net/wicus-reqs#HardwareRequirements"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasLevel" : {
+      "@id" : "http://purl.org/net/wicus-reqs#hasLevel",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ConcreteWorkflow" : {
+      "@id" : "http://purl.org/net/wicus-reqs#ConcreteWorkflow"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

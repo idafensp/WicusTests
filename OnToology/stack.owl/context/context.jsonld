@@ -1,0 +1,183 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasLicense" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasLicense",
+      "@type" : "@id"
+    },
+    "nextComponent" : {
+      "@id" : "http://purl.org/net/wicus-stack#nextComponent",
+      "@type" : "@id"
+    },
+    "requiresHigherVersion" : {
+      "@id" : "http://purl.org/net/wicus-stack#requiresHigherVersion",
+      "@type" : "@id"
+    },
+    "SoftwareBinary" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareBinary"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasVersion",
+      "@type" : "@id"
+    },
+    "isConfigurationParameterOf" : {
+      "@id" : "http://purl.org/net/wicus-stack#isConfigurationParameterOf",
+      "@type" : "@id"
+    },
+    "nextStep" : {
+      "@id" : "http://purl.org/net/wicus-stack#nextStep",
+      "@type" : "@id"
+    },
+    "binary" : {
+      "@id" : "http://purl.org/net/wicus-stack#binary",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "isDeploymentPlanOf" : {
+      "@id" : "http://purl.org/net/wicus-stack#isDeploymentPlanOf",
+      "@type" : "@id"
+    },
+    "Step" : {
+      "@id" : "http://purl.org/net/p-plan#Step"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "isStepOfPlan" : {
+      "@id" : "http://purl.org/net/p-plan#isStepOfPlan",
+      "@type" : "@id"
+    },
+    "script" : {
+      "@id" : "http://purl.org/net/wicus-stack#script",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ConfigurationParameter" : {
+      "@id" : "http://purl.org/net/wicus-stack#ConfigurationParameter"
+    },
+    "isDeploymentStepOf" : {
+      "@id" : "http://purl.org/net/wicus-stack#isDeploymentStepOf",
+      "@type" : "@id"
+    },
+    "hasSoftwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasSoftwareComponent",
+      "@type" : "@id"
+    },
+    "requiresVersion" : {
+      "@id" : "http://purl.org/net/wicus-stack#requiresVersion",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Plan" : {
+      "@id" : "http://purl.org/net/p-plan#Plan"
+    },
+    "DeploymentStep" : {
+      "@id" : "http://purl.org/net/wicus-stack#DeploymentStep"
+    },
+    "OpenLicense" : {
+      "@id" : "http://purl.org/net/wicus-stack#OpenLicense"
+    },
+    "SoftwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasDeploymentInfo" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasDeploymentInfo",
+      "@type" : "@id"
+    },
+    "parameterValue" : {
+      "@id" : "http://purl.org/net/wicus-stack#parameterValue",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "requiresLowerVersion" : {
+      "@id" : "http://purl.org/net/wicus-stack#requiresLowerVersion",
+      "@type" : "@id"
+    },
+    "isInputVarOf" : {
+      "@id" : "http://purl.org/net/p-plan#isInputVarOf",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "parameterName" : {
+      "@id" : "http://purl.org/net/wicus-stack#parameterName",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "higher" : {
+      "@id" : "http://purl.org/net/wicus-stack#higher",
+      "@type" : "@id"
+    },
+    "lower" : {
+      "@id" : "http://purl.org/net/wicus-stack#lower",
+      "@type" : "@id"
+    },
+    "DeploymentScript" : {
+      "@id" : "http://purl.org/net/wicus-stack#DeploymentScript"
+    },
+    "Variable" : {
+      "@id" : "http://purl.org/net/p-plan#Variable"
+    },
+    "Version" : {
+      "@id" : "http://purl.org/net/wicus-stack#Version"
+    },
+    "NotOpenLicense" : {
+      "@id" : "http://purl.org/net/wicus-stack#NotOpenLicense"
+    },
+    "dependsOn" : {
+      "@id" : "http://purl.org/net/wicus-stack#dependsOn",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "versionNumber" : {
+      "@id" : "http://purl.org/net/wicus-stack#versionNumber",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "License" : {
+      "@id" : "http://purl.org/net/wicus-stack#License"
+    },
+    "ConfigurationInfo" : {
+      "@id" : "http://purl.org/net/wicus-stack#ConfigurationInfo"
+    },
+    "requires" : {
+      "@id" : "http://purl.org/dc/terms/requires",
+      "@type" : "@id"
+    },
+    "DeploymentPlan" : {
+      "@id" : "http://purl.org/net/wicus-stack#DeploymentPlan"
+    },
+    "hasDeploymentScript" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasDeploymentScript",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "hasBinary" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasBinary",
+      "@type" : "@id"
+    },
+    "SoftwareStack" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareStack"
+    },
+    "hasConfigurationInfo" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasConfigurationInfo",
+      "@type" : "@id"
+    }
+  }
+}

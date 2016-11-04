@@ -1,0 +1,94 @@
+@prefix :        <http://purl.org/net/wicus-sva#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix wicus-sva:  <http://purl.org/net/wicus-sva#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+
+wicus-sva:providedBy
+      a       owl:ObjectProperty ;
+      rdfs:comment "wsva:providedBy links a wsva:ImageAppliance to its corresponding wsva:InfrastructureProvider"^^rdfs:Literal ;
+      rdfs:domain wicus-sva:ImageAppliance ;
+      rdfs:range wicus-sva:InfrastructureProvider .
+
+terms:license
+      a       owl:AnnotationProperty .
+
+wicus-sva:InfrastructureProvider
+      a       owl:Class ;
+      rdfs:comment "A wsva:InfrastructureProvider represents a service provider offering computational resources on demand."^^rdfs:Literal ;
+      rdfs:subClassOf owl:Thing .
+
+wicus-sva:ImageAppliance
+      a       owl:Class ;
+      rdfs:comment "A wsva:ImageAppliance represents an image specification supporting the instantiation of an appliance in an infrastructure provider platform."^^rdfs:Literal ;
+      rdfs:subClassOf owl:Thing .
+
+vann:preferredNamespaceUri
+      a       owl:AnnotationProperty .
+
+wicus-sva:ScientificVirtualAppliance
+      a       owl:Class ;
+      rdfs:comment "A wsva:ScientificVirtualAppliance represents a computational resource that may have been tuned for scientific purposes."^^rdfs:Literal .
+
+wicus-sva:isSupportedBy
+      a       owl:ObjectProperty ;
+      rdfs:comment "wsva:isSupportedBy links a wsva:ScientificVirtualAppliance to the set of wsva:ImageAppliance that supports it."^^rdfs:Literal ;
+      rdfs:domain wicus-sva:ScientificVirtualAppliance ;
+      rdfs:range wicus-sva:ImageAppliance .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+<http://purl.org/net/wicus-sva>
+      a       owl:Ontology ;
+      dc:creator "http://delicias.dia.fi.upm.es/~isantana/"^^xsd:anyURI ;
+      dc:title "The WICUS Scientific Virtual Appliance ontology"@en ;
+      terms:created "2013-06-14"^^xsd:date ;
+      terms:description "The WICUS Scientific Virtual Appliance ontology describes the virtual computational resources used for executing scientific experiments, usally as Virtual Machines deployed on a IaaS provider or a virtualization solution. This ontology is part of the WICUS Ontology network." ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:modified "2013-07-08"^^xsd:date ;
+      vann:preferredNamespacePrefix
+              "wsva" ;
+      vann:preferredNamespaceUri
+              "http://purl.org/net/wicus-sva#" ;
+      owl:versionInfo "2.0" .
+
+wicus-sva:VMImage
+      a       owl:Class ;
+      rdfs:comment "A wsva:VMImage represents a Virtual Machine image that defines the basis of an appliance."^^rdfs:Literal ;
+      rdfs:subClassOf owl:Thing .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+wicus-sva:vmId
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "wsva:vmId defines the identifier of a wsva:VMImage"^^rdfs:Literal ;
+      rdfs:domain wicus-sva:VMImage ;
+      rdfs:range rdfs:Literal .
+
+owl:Thing
+      a       owl:Class .
+
+wicus-sva:hasVMImage
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "wsva:hasVMImage links a wsva:ImageAppliance to the set of wsva:VMImage that supports it."^^rdfs:Literal ;
+      rdfs:domain wicus-sva:ImageAppliance ;
+      rdfs:range wicus-sva:VMImage .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+terms:description
+      a       owl:AnnotationProperty .

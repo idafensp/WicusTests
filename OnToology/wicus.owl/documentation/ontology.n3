@@ -1,0 +1,60 @@
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-hwspecs#HardwareSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-sva#ImageAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-sva#ScientificVirtualAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#SoftwareComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#hasOutputInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#DeploymentStep> .
+<http://purl.org/net/wicus-stack#hasOutputInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#ConfigurationInfo> .
+<http://purl.org/net/wicus-stack#hasOutputInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "wstack:hasOutputInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the output values resulting of executing a deployment step."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-stack#hasOutputInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus#composedBySoftwareStack> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareStack> .
+<http://purl.org/net/wicus#composedBySoftwareStack> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#SoftwareRequirements> .
+<http://purl.org/net/wicus#composedBySoftwareStack> <http://www.w3.org/2000/01/rdf-schema#comment> "wicus:composedBySoftwareStack links a wreq:SoftwareRequirements to a wstack:SoftwareStack defining the required software characteristics."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus#composedBySoftwareStack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#DeploymentStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-stack#Version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/requires> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus#hasHardwareSpecs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#ImageAppliance> .
+<http://purl.org/net/wicus#hasHardwareSpecs> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-hwspecs#HardwareSpec> .
+<http://purl.org/net/wicus#hasHardwareSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "wicus:hasHardwareSpecs links a wsva:ImageAppliance to a whw:HardwareSpec that defines the image hardware capabilities."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus#hasHardwareSpecs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#SoftwareStack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus#composedByHardwareSpec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#HardwareRequirements> .
+<http://purl.org/net/wicus#composedByHardwareSpec> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-hwspecs#HardwareSpec> .
+<http://purl.org/net/wicus#composedByHardwareSpec> <http://www.w3.org/2000/01/rdf-schema#comment> "wicus:composedByHardwareSpec links a wreq:HardwareRequirements to a whw:HardwareSpec defining the required hardware characteristics."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus#composedByHardwareSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus#hasSoftwareStack> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#ScientificVirtualAppliance> .
+<http://purl.org/net/wicus#hasSoftwareStack> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareStack> .
+<http://purl.org/net/wicus#hasSoftwareStack> <http://www.w3.org/2000/01/rdf-schema#comment> "wicus:hasSoftwareStack links a wsva:ScientificVirtualAppliance to a wstack:SoftwareStack defining the software characteristics of a scientific appliance."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus#hasSoftwareStack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-stack#ConfigurationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#HardwareRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus> <http://purl.org/dc/elements/1.1/title> "The Workflow Infrastructure Conservation Using Semantics super mega cool ontology" .
+<http://purl.org/net/wicus> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-stack> .
+<http://purl.org/net/wicus> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-hwspecs> .
+<http://purl.org/net/wicus> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-sva> .
+<http://purl.org/net/wicus> <http://purl.org/dc/terms/description> "The WICUS ontology network is a set of ontologies designed to represent the information about the computational infrastructure involved on the execution of computational scientific experiments modelled as scientific workflows." .
+<http://purl.org/net/wicus> <http://purl.org/dc/terms/created> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus> <http://purl.org/dc/terms/modified> "2013-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-reqs> .
+<http://purl.org/net/wicus> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wicus" .
+<http://purl.org/net/wicus> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+<http://purl.org/net/wicus> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/wicus#" .
+<http://purl.org/net/wicus> <http://purl.org/dc/elements/1.1/creator> "http://delicias.dia.fi.upm.es/~isantana/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/net/wicus#requiresHardware> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://purl.org/net/wicus#requiresHardware> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-hwspecs#HardwareSpec> .
+<http://purl.org/net/wicus#requiresHardware> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/requires> .
+<http://purl.org/net/wicus#requiresHardware> <http://www.w3.org/2000/01/rdf-schema#comment> "wicus:requiresHardware links a wstack:SoftwareComponent to a whw:HardwareSpec that defines the necessary hardware characteristics for deploying it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus#requiresHardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#SoftwareRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

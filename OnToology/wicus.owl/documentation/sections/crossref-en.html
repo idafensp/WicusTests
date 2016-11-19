@@ -1,0 +1,221 @@
+<h2>4. Cross reference for wicus classes, properties and dataproperties</h2>
+This section provides details for each class and property defined by wicus.
+<div id="objectproperties">
+   <h2>Object Properties</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#composedByHardwareSpec" title="http://purl.org/net/wicus#composedByHardwareSpec">
+            <span>composed by hardware spec</span>
+         </a>
+      </li>
+      <li>
+         <a href="#composedBySoftwareStack"
+            title="http://purl.org/net/wicus#composedBySoftwareStack">
+            <span>composed by software stack</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasHardwareSpecs" title="http://purl.org/net/wicus#hasHardwareSpecs">
+            <span>has hardware specs</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-stack#hasOutputInfo" title="http://purl.org/net/wicus-stack#hasOutputInfo">
+            <span>has output info</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasSoftwareStack" title="http://purl.org/net/wicus#hasSoftwareStack">
+            <span>has software stack</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#requiresExecutionEnvironment"
+            title="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">
+            <span>requires execution environment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#requiresHardware" title="http://purl.org/net/wicus#requiresHardware">
+            <span>requires hardware</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="composedByHardwareSpec">
+      <h3>composed by hardware spec<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus#composedByHardwareSpec</p>
+      <div class="comment">
+         <span class="markdown">wicus:composedByHardwareSpec links a wreq:HardwareRequirements to a whw:HardwareSpec defining the required hardware characteristics.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.org/net/wicus-reqs#HardwareRequirements">hardware requirements</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-hwspecs#HardwareSpec">hardware spec</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="composedBySoftwareStack">
+      <h3>composed by software stack<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus#composedBySoftwareStack</p>
+      <div class="comment">
+         <span class="markdown">wicus:composedBySoftwareStack links a wreq:SoftwareRequirements to a wstack:SoftwareStack defining the required software characteristics.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.org/net/wicus-reqs#SoftwareRequirements">software requirements</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-stack#SoftwareStack">software stack</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasHardwareSpecs">
+      <h3>has hardware specs<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus#hasHardwareSpecs</p>
+      <div class="comment">
+         <span class="markdown">wicus:hasHardwareSpecs links a wsva:ImageAppliance to a whw:HardwareSpec that defines the image hardware capabilities.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-sva#ImageAppliance">image appliance</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-hwspecs#HardwareSpec">hardware spec</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-stack#hasOutputInfo">
+      <h3>has output info<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-stack#hasOutputInfo</p>
+      <div class="comment">
+         <span class="markdown">wstack:hasOutputInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the output values resulting of executing a deployment step.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-stack#DeploymentStep">deployment step</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.org/net/wicus-stack#ConfigurationInfo">configuration info</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSoftwareStack">
+      <h3>has software stack<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus#hasSoftwareStack</p>
+      <div class="comment">
+         <span class="markdown">wicus:hasSoftwareStack links a wsva:ScientificVirtualAppliance to a wstack:SoftwareStack defining the software characteristics of a scientific appliance.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.org/net/wicus-sva#ScientificVirtualAppliance">scientific virtual appliance</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-stack#SoftwareStack">software stack</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">
+      <h3>requires execution environment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#requiresExecutionEnvironment</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/dc/terms/requires">requires</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="requiresHardware">
+      <h3>requires hardware<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus#requiresHardware</p>
+      <div class="comment">
+         <span class="markdown">wicus:requiresHardware links a wstack:SoftwareComponent to a whw:HardwareSpec that defines the necessary hardware characteristics for deploying it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/dc/terms/requires">requires</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://purl.org/net/wicus-stack#SoftwareComponent">software component</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/wicus-hwspecs#HardwareSpec">hardware spec</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div>

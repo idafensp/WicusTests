@@ -1,0 +1,96 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "ImageAppliance" : {
+      "@id" : "http://purl.org/net/wicus-sva#ImageAppliance"
+    },
+    "hasOutputInfo" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasOutputInfo",
+      "@type" : "@id"
+    },
+    "SoftwareRequirements" : {
+      "@id" : "http://purl.org/net/wicus-reqs#SoftwareRequirements"
+    },
+    "ScientificVirtualAppliance" : {
+      "@id" : "http://purl.org/net/wicus-sva#ScientificVirtualAppliance"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "requiresExecutionEnvironment" : {
+      "@id" : "http://purl.org/net/wicus-reqs#requiresExecutionEnvironment",
+      "@type" : "@id"
+    },
+    "HardwareSpec" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#HardwareSpec"
+    },
+    "composedBySoftwareStack" : {
+      "@id" : "http://purl.org/net/wicus#composedBySoftwareStack",
+      "@type" : "@id"
+    },
+    "hasSoftwareStack" : {
+      "@id" : "http://purl.org/net/wicus#hasSoftwareStack",
+      "@type" : "@id"
+    },
+    "requiresHardware" : {
+      "@id" : "http://purl.org/net/wicus#requiresHardware",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "DeploymentStep" : {
+      "@id" : "http://purl.org/net/wicus-stack#DeploymentStep"
+    },
+    "SoftwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+    },
+    "HardwareRequirements" : {
+      "@id" : "http://purl.org/net/wicus-reqs#HardwareRequirements"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "composedByHardwareSpec" : {
+      "@id" : "http://purl.org/net/wicus#composedByHardwareSpec",
+      "@type" : "@id"
+    },
+    "Version" : {
+      "@id" : "http://purl.org/net/wicus-stack#Version"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ConfigurationInfo" : {
+      "@id" : "http://purl.org/net/wicus-stack#ConfigurationInfo"
+    },
+    "requires" : {
+      "@id" : "http://purl.org/dc/terms/requires",
+      "@type" : "@id"
+    },
+    "hasHardwareSpecs" : {
+      "@id" : "http://purl.org/net/wicus#hasHardwareSpecs",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "SoftwareStack" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareStack"
+    }
+  }
+}

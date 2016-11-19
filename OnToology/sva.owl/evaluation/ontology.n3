@@ -1,0 +1,48 @@
+<http://purl.org/net/wicus-sva#vmId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#vmId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#VMImage> .
+<http://purl.org/net/wicus-sva#vmId> <http://www.w3.org/2000/01/rdf-schema#comment> "wsva:vmId defines the identifier of a wsva:VMImage"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#vmId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/wicus-sva#vmId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-sva#InfrastructureProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "A wsva:InfrastructureProvider represents a service provider offering computational resources on demand."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#InfrastructureProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/net/wicus-sva#InfrastructureProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-sva> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+<http://purl.org/net/wicus-sva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/terms/modified> "2013-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/elements/1.1/title> "The WICUS Scientific Virtual Appliance ontology"@en .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/terms/description> "The WICUS Scientific Virtual Appliance ontology describes the virtual computational resources used for executing scientific experiments, usally as Virtual Machines deployed on a IaaS provider or a virtualization solution. This ontology is part of the WICUS Ontology network." .
+<http://purl.org/net/wicus-sva> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wsva" .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/elements/1.1/creator> "http://delicias.dia.fi.upm.es/~isantana/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-sva> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/wicus-sva#" .
+<http://purl.org/net/wicus-sva> <http://purl.org/dc/terms/created> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-sva#ImageAppliance> <http://www.w3.org/2000/01/rdf-schema#comment> "A wsva:ImageAppliance represents an image specification supporting the instantiation of an appliance in an infrastructure provider platform."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#ImageAppliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/net/wicus-sva#ImageAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-sva#hasVMImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-sva#VMImage> .
+<http://purl.org/net/wicus-sva#hasVMImage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#ImageAppliance> .
+<http://purl.org/net/wicus-sva#hasVMImage> <http://www.w3.org/2000/01/rdf-schema#comment> "wsva:hasVMImage links a wsva:ImageAppliance to the set of wsva:VMImage that supports it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#hasVMImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/net/wicus-sva#hasVMImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-sva#ScientificVirtualAppliance> <http://www.w3.org/2000/01/rdf-schema#comment> "A wsva:ScientificVirtualAppliance represents a computational resource that may have been tuned for scientific purposes."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#ScientificVirtualAppliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-sva#VMImage> <http://www.w3.org/2000/01/rdf-schema#comment> "A wsva:VMImage represents a Virtual Machine image that defines the basis of an appliance."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#VMImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/net/wicus-sva#VMImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-sva#providedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-sva#InfrastructureProvider> .
+<http://purl.org/net/wicus-sva#providedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#ImageAppliance> .
+<http://purl.org/net/wicus-sva#providedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "wsva:providedBy links a wsva:ImageAppliance to its corresponding wsva:InfrastructureProvider"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#providedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-sva#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-sva#ScientificVirtualAppliance> .
+<http://purl.org/net/wicus-sva#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-sva#ImageAppliance> .
+<http://purl.org/net/wicus-sva#isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "wsva:isSupportedBy links a wsva:ScientificVirtualAppliance to the set of wsva:ImageAppliance that supports it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-sva#isSupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

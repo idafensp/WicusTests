@@ -1,0 +1,9 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "owl:Thing" "wicus-sva:VMImage" "wicus-sva:InfrastructureProvider" "wicus-sva:ImageAppliance" ; /*classes style*/
+	"wicus-sva:VMImage" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"wicus-sva:ImageAppliance" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"wicus-sva:InfrastructureProvider" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+
+}

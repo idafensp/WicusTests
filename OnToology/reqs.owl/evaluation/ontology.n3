@@ -1,0 +1,66 @@
+<http://purl.org/net/p-plan#isStepOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#isStepOfWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#WorkflowStep> .
+<http://purl.org/net/wicus-reqs#isStepOfWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#isStepOfWorkflow> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/p-plan#isStepOfPlan> .
+<http://purl.org/net/wicus-reqs#isStepOfWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "wreq:isStepOfWorkflow is a specific type of p-plan:isStepOfPlan that relates a wreq:WorkflowStep to the wreqs:Workflow that it belongs to."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#isStepOfWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#hasConcreteWorkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-reqs#ConcreteWorkflow> .
+<http://purl.org/net/wicus-reqs#hasConcreteWorkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#AbstractWorkflow> .
+<http://purl.org/net/wicus-reqs#hasConcreteWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "wreq:hasConcreteWorkflow links an wreq:AbstractWorkflow to the set of wreq:ConcreteWorkflow that implements it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#hasConcreteWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-reqs#WorkflowStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:WorkflowStep is a specific type of p-plan:Step, representing a single step of a workflow."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#WorkflowStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Step> .
+<http://purl.org/net/wicus-reqs#WorkflowStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#AbstractWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:AbstractWorkflow is a specific type of wreq:Workflow in which at least one of its steps is not fully specified."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#AbstractWorkflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#AbstractWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#ConcreteWorkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:ConcreteWorkflow is a specific type of wreq:Workflow in which all its steps are fully specified."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#ConcreteWorkflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#ConcreteWorkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/terms/modified> "2013-07-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/terms/created> "2013-06-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/elements/1.1/creator> "http://delicias.dia.fi.upm.es/~isantana/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wreq" .
+<http://purl.org/net/wicus-reqs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/terms/description> "The WICUS Workflow Execution Requirements ontology relates a Scientific Workflow to the execution requirements and dependencies for executing it. This ontology is part of the WICUS Ontology network." .
+<http://purl.org/net/wicus-reqs> <http://purl.org/dc/elements/1.1/title> "The WICUS Workflow Execution Requirements ontology"@en .
+<http://purl.org/net/wicus-reqs> <http://www.w3.org/2002/07/owl#versionInfo> "2.0" .
+<http://purl.org/net/wicus-reqs> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/wicus-reqs#" .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#hasLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-reqs#RequirementLevel> .
+<http://purl.org/net/wicus-reqs#hasLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#ExecutionEnvironment> .
+<http://purl.org/net/wicus-reqs#hasLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "wreq:hasLevel links a wreq:ExecutionEnvironment to its corresponding wreq:RequirementLevel."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#hasLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-reqs#ExecutionEnvironment> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "wreq:requiresExecutionEnvironment is a specific type of dcterms:requires that links a wreq:Worflow to the wreq:ExecutionEnvironment that must be available for executing it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#requiresExecutionEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:Workflow is a specific type of p-plan:Plan, representing a computational scientific workflow from the point of view of its infrastructure."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Plan> .
+<http://purl.org/net/wicus-reqs#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#hasSubworkflow> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#hasSubworkflow> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-reqs#Workflow> .
+<http://purl.org/net/wicus-reqs#hasSubworkflow> <http://www.w3.org/2000/01/rdf-schema#comment> "wreq:hasSubworkflow links a wreq:Workflow to the subworkflows that compose it."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#hasSubworkflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/net/p-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#HardwareRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:HardwareRequirements is a specific type of wreq:ExecutionEnvironment, representing the hardware resources that must be provided to support the execution of a workflow."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#HardwareRequirements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-reqs#ExecutionEnvironment> .
+<http://purl.org/net/wicus-reqs#HardwareRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#ExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:ExecutionEnvironment represents the computational resources that must be provided to support the execution of a workflow."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#ExecutionEnvironment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/net/wicus-reqs#ExecutionEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/net/wicus-reqs#SoftwareRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:SoftwareRequirements is a specific type of wreq:ExecutionEnvironment, representing the software resources that must be provided to support the execution of a workflow."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#SoftwareRequirements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-reqs#ExecutionEnvironment> .
+<http://purl.org/net/wicus-reqs#SoftwareRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/net/wicus-reqs#RequirementLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "A wreq:RequirementLevel represents the degree of importance of a requirement."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/net/wicus-reqs#RequirementLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

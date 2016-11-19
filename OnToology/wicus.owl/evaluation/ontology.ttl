@@ -1,0 +1,127 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix :        <http://purl.org/net/wicus#> .
+@prefix wreq:    <http://purl.org/net/wicus-reqs#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix wsva:    <http://purl.org/net/wicus-sva#> .
+@prefix whw:     <http://purl.org/net/wicus-hwspecs#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix wstack:  <http://purl.org/net/wicus-stack#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wicus:   <http://purl.org/net/wicus#> .
+
+wreq:SoftwareRequirements
+      a       owl:Class .
+
+wsva:ImageAppliance
+      a       owl:Class .
+
+vann:preferredNamespaceUri
+      a       owl:AnnotationProperty .
+
+wstack:DeploymentStep
+      a       owl:Class .
+
+wsva:ScientificVirtualAppliance
+      a       owl:Class .
+
+wreq:HardwareRequirements
+      a       owl:Class .
+
+wstack:hasOutputInfo
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasOutputInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the output values resulting of executing a deployment step."^^rdfs:Literal ;
+      rdfs:domain wstack:DeploymentStep ;
+      rdfs:range wstack:ConfigurationInfo .
+
+terms:requires
+      a       owl:ObjectProperty .
+
+wicus:composedBySoftwareStack
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:composedBySoftwareStack links a wreq:SoftwareRequirements to a wstack:SoftwareStack defining the required software characteristics."^^rdfs:Literal ;
+      rdfs:domain wreq:SoftwareRequirements ;
+      rdfs:range wstack:SoftwareStack .
+
+wicus:composedByHardwareSpec
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:composedByHardwareSpec links a wreq:HardwareRequirements to a whw:HardwareSpec defining the required hardware characteristics."^^rdfs:Literal ;
+      rdfs:domain wreq:HardwareRequirements ;
+      rdfs:range whw:HardwareSpec .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+terms:license
+      a       owl:AnnotationProperty .
+
+wicus:requiresHardware
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:requiresHardware links a wstack:SoftwareComponent to a whw:HardwareSpec that defines the necessary hardware characteristics for deploying it."^^rdfs:Literal ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range whw:HardwareSpec ;
+      rdfs:subPropertyOf terms:requires .
+
+wstack:Version
+      a       owl:Class .
+
+wstack:SoftwareStack
+      a       owl:Class .
+
+<http://purl.org/net/wicus>
+      a       owl:Ontology ;
+      dc:creator "http://delicias.dia.fi.upm.es/~isantana/"^^xsd:anyURI ;
+      dc:title "The Workflow Infrastructure Conservation Using Semantics ontology" ;
+      terms:created "2013-06-14"^^xsd:date ;
+      terms:description "The WICUS ontology network is a set of ontologies designed to represent the information about the computational infrastructure involved on the execution of computational scientific experiments modelled as scientific workflows." ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:modified "2013-07-08"^^xsd:date ;
+      vann:preferredNamespacePrefix
+              "wicus" ;
+      vann:preferredNamespaceUri
+              "http://purl.org/net/wicus#" ;
+      owl:imports <http://purl.org/net/wicus-stack> , <http://purl.org/net/wicus-hwspecs> , <http://purl.org/net/wicus-reqs> , <http://purl.org/net/wicus-sva> ;
+      owl:versionInfo "2.0" .
+
+whw:HardwareSpec
+      a       owl:Class .
+
+wstack:ConfigurationInfo
+      a       owl:Class .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+wreq:requiresExecutionEnvironment
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf terms:requires .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+wicus:hasSoftwareStack
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:hasSoftwareStack links a wsva:ScientificVirtualAppliance to a wstack:SoftwareStack defining the software characteristics of a scientific appliance."^^rdfs:Literal ;
+      rdfs:domain wsva:ScientificVirtualAppliance ;
+      rdfs:range wstack:SoftwareStack .
+
+wicus:hasHardwareSpecs
+      a       owl:ObjectProperty ;
+      rdfs:comment "wicus:hasHardwareSpecs links a wsva:ImageAppliance to a whw:HardwareSpec that defines the image hardware capabilities."^^rdfs:Literal ;
+      rdfs:domain wsva:ImageAppliance ;
+      rdfs:range whw:HardwareSpec .
+
+wstack:SoftwareComponent
+      a       owl:Class .
+
+terms:description
+      a       owl:AnnotationProperty .

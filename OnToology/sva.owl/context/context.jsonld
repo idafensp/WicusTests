@@ -1,0 +1,65 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasVMImage" : {
+      "@id" : "http://purl.org/net/wicus-sva#hasVMImage",
+      "@type" : "@id"
+    },
+    "ImageAppliance" : {
+      "@id" : "http://purl.org/net/wicus-sva#ImageAppliance"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "VMImage" : {
+      "@id" : "http://purl.org/net/wicus-sva#VMImage"
+    },
+    "providedBy" : {
+      "@id" : "http://purl.org/net/wicus-sva#providedBy",
+      "@type" : "@id"
+    },
+    "vmId" : {
+      "@id" : "http://purl.org/net/wicus-sva#vmId",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ScientificVirtualAppliance" : {
+      "@id" : "http://purl.org/net/wicus-sva#ScientificVirtualAppliance"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "isSupportedBy" : {
+      "@id" : "http://purl.org/net/wicus-sva#isSupportedBy",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "InfrastructureProvider" : {
+      "@id" : "http://purl.org/net/wicus-sva#InfrastructureProvider"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

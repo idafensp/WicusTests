@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "p-plan:Step" "wstack:DeploymentStep" "wstack:OpenLicense" "wstack:License" "wstack:ConfigurationParameter" "wstack:NotOpenLicense" "wstack:DeploymentPlan" "p-plan:Plan" "p-plan:Variable" ; /*classes style*/
+	"wstack:OpenLicense" -> "wstack:License" [ label = "rdfs:subClassOf" ];
+	"wstack:DeploymentStep" -> "p-plan:Step" [ label = "rdfs:subClassOf" ];
+	"wstack:NotOpenLicense" -> "wstack:License" [ label = "rdfs:subClassOf" ];
+	"wstack:ConfigurationParameter" -> "p-plan:Variable" [ label = "rdfs:subClassOf" ];
+	"wstack:DeploymentPlan" -> "p-plan:Plan" [ label = "rdfs:subClassOf" ];
+
+}

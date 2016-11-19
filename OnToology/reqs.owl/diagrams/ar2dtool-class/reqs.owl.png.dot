@@ -1,0 +1,12 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "wicus-reqs:AbstractWorkflow" "wicus-reqs:WorkflowStep" "wicus-reqs:ExecutionEnvironment" "wicus-reqs:RequirementLevel" "wicus-reqs:ConcreteWorkflow" "wicus-reqs:Workflow" ; /*classes style*/
+	"wicus-reqs:isStepOfWorkflow" -> "p-plan:isStepOfPlan" [ label = "rdfs:subPropertyOf" ];
+	"wicus-reqs:ExecutionEnvironment" -> "wicus-reqs:RequirementLevel" [ label = "wicus-reqs:hasLevel" ];
+	"wicus-reqs:Workflow" -> "wicus-reqs:ExecutionEnvironment" [ label = "wicus-reqs:requiresExecutionEnvironment" ];
+	"wicus-reqs:Workflow" -> "wicus-reqs:Workflow" [ label = "wicus-reqs:hasSubworkflow" ];
+	"wicus-reqs:WorkflowStep" -> "wicus-reqs:Workflow" [ label = "wicus-reqs:isStepOfWorkflow" ];
+	"wicus-reqs:AbstractWorkflow" -> "wicus-reqs:ConcreteWorkflow" [ label = "wicus-reqs:hasConcreteWorkflow" ];
+
+}

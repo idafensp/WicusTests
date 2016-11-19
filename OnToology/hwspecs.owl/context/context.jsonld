@@ -1,0 +1,74 @@
+{
+  "@context" : {
+    "Storage" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#Storage"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasFeature" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#hasFeature",
+      "@type" : "@id"
+    },
+    "Feature" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#Feature"
+    },
+    "CPU" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#CPU"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "HardwareSpec" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#HardwareSpec"
+    },
+    "value" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#value",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Network" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#Network"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Memory" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#Memory"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "unit" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#unit",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "HardwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#HardwareComponent"
+    },
+    "hasHardwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-hwspecs#hasHardwareComponent",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

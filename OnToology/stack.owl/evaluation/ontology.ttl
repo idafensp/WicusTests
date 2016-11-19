@@ -1,0 +1,261 @@
+@prefix :        <http://purl.org/net/wicus-stack#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix p-plan:  <http://purl.org/net/p-plan#> .
+@prefix wstack:  <http://purl.org/net/wicus-stack#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+
+wstack:License
+      a       owl:Class ;
+      rdfs:comment "A wstack:License represents the licensing conditions under which a software component can be used."^^rdfs:Literal .
+
+<http://purl.org/net/wicus-stack>
+      a       owl:Ontology ;
+      dc:creator "http://delicias.dia.fi.upm.es/~isantana/"^^xsd:anyURI ;
+      dc:title "The WICUS Software Stack ontology"@en ;
+      terms:created "2013-06-14"^^xsd:date ;
+      terms:description "The WICUS Software Stack ontology have been developed to describe the software elements of a computational resource. These descriptions can be used to describe both, the already deployed software components and the software requiremens of a workflow. This ontology is part of the WICUS Ontology network." ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:modified "2013-07-08"^^xsd:date ;
+      vann:preferredNamespacePrefix
+              "wstack" ;
+      vann:preferredNamespaceUri
+              "http://purl.org/net/wicus-stack#" ;
+      owl:versionInfo "2.0" .
+
+wstack:DeploymentStep
+      a       owl:Class ;
+      rdfs:comment "A wstack:DeploymentSetp is a specific type of p-plan:Step. It represents an action that must be performed in order to deploy a software component."^^rdfs:Literal ;
+      rdfs:subClassOf p-plan:Step .
+
+vann:preferredNamespaceUri
+      a       owl:AnnotationProperty .
+
+wstack:SoftwareBinary
+      a       owl:Class ;
+      rdfs:comment "A wstack:SoftwareBinary represents an executable and machine readable file that can be run by a computer, virtual machine or interpreter."^^rdfs:Literal .
+
+wstack:OpenLicense
+      a       owl:Class ;
+      rdfs:comment "A wstack:OpenLincense represents licenses that allow a software component to be used by any user."^^rdfs:Literal ;
+      rdfs:subClassOf wstack:License .
+
+wstack:nextStep
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "wstack:nextStep specifies the invocation order of two wstack:DeploymentStep."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:DeploymentStep ;
+      rdfs:range wstack:DeploymentStep .
+
+wstack:binary
+      a       owl:DatatypeProperty ;
+      rdfs:comment "wstack:binary defines the location of the binary package of a wstack:SoftwareComponent"^^rdfs:Literal ;
+      rdfs:domain wstack:SoftwareBinary ;
+      rdfs:range rdfs:Literal .
+
+p-plan:Step
+      a       owl:Class .
+
+wstack:requiresLowerVersion
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:requiresVersion links a wstack:SoftwareComponent to the maximun  wstack:Version required by this component on the context of a workflow. A wstack:SoftwareComponent then required the defined wstack:Version or a lower one." ;
+      rdfs:subPropertyOf wstack:requiresVersion .
+
+wstack:versionNumber
+      a       owl:DatatypeProperty ;
+      rdfs:comment "wstack:versionNumer defines the identifier of a version, usually as a numeric value, and sometimes a code name or an acronym."^^rdfs:Literal ;
+      rdfs:domain wstack:Version ;
+      rdfs:range rdfs:Literal .
+
+p-plan:Variable
+      a       owl:Class .
+
+terms:license
+      a       owl:AnnotationProperty .
+
+wstack:hasBinary
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasBinary links a wstack:SoftwareComponent to its corresponding wstack:SoftwareBinary."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:SoftwareBinary .
+
+p-plan:Plan
+      a       owl:Class .
+
+wstack:isConfigurationParameterOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:isConfigurationParameterOf is a specific type of p-plan:isInputVarOf linking a wstack:ConfigurationParameter to the wstack:ConfigurationInformation that it belongs to."^^rdfs:Literal ;
+      rdfs:domain wstack:ConfigurationParameter ;
+      rdfs:range wstack:ConfigurationInfo ;
+      rdfs:subPropertyOf p-plan:isInputVarOf .
+
+wstack:ConfigurationInfo
+      a       owl:Class ;
+      rdfs:comment "A wstack:ConfigurationInfo represents the input information for deploying and configuring a software component."^^rdfs:Literal .
+
+wstack:nextComponent
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:nextComponent specifies the deployment order of two wstack:SoftwareComponent."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:SoftwareComponent .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+wstack:hasSoftwareComponent
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasSoftwareComponent links a wstack:SoftwareStack to one or more wstack:SofwareComponent that composes the stack."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareStack ;
+      rdfs:range wstack:SoftwareComponent .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+wstack:dependsOn
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:dependsOn links a wstack:SoftwareStack to another wstack:SoftwareStack that is necessary for deploying and running the first one."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareStack ;
+      rdfs:range wstack:SoftwareStack .
+
+wstack:lower
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:lower links a wstack:Version to another one that is higher than the first one."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:Version ;
+      rdfs:range wstack:Version ;
+      owl:inverseOf wstack:higher .
+
+wstack:SoftwareComponent
+      a       owl:Class ;
+      rdfs:comment "A wstack:SoftwareComponent represents a software entity that can be deployed in a computational resource."^^rdfs:Literal .
+
+terms:description
+      a       owl:AnnotationProperty .
+
+wstack:requiresVersion
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:requiresVersion links a wstack:SoftwareComponent to the wstack:Version required by this component on the context of a workflow." ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:Version ;
+      rdfs:subPropertyOf terms:requires .
+
+wstack:hasDeploymentInfo
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasDeploymentInfo links a wstack:DeploymentStep to a wstack:ConfigurationInfo representing the input values for executing a deployment step."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:DeploymentStep ;
+      rdfs:range wstack:ConfigurationInfo .
+
+terms:requires
+      a       owl:ObjectProperty .
+
+wstack:DeploymentScript
+      a       owl:Class ;
+      rdfs:comment "A wstack:DeploymentScript represents an executable process that is performed in order to carry out a deployment step."^^rdfs:Literal .
+
+wstack:higher
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:comment "wstack:higher links a wstack:Version to another one that is lower than the first one."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:Version ;
+      rdfs:range wstack:Version .
+
+p-plan:isStepOfPlan
+      a       owl:ObjectProperty .
+
+wstack:hasLicense
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasLicense links a wstack:SoftwareComponent to its corresponding wstack:License"^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:License .
+
+p-plan:isInputVarOf
+      a       owl:ObjectProperty .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+wstack:script
+      a       owl:DatatypeProperty ;
+      rdfs:comment "wstack:script defines the name and/or location of and script."^^rdfs:Literal ;
+      rdfs:domain wstack:DeploymentScript ;
+      rdfs:range rdfs:Literal .
+
+wstack:hasConfigurationInfo
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasConfigurationInfo links a wstack:SoftwareComponent to a wstack:ConfigurationInfo representing the information for configuring it."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:ConfigurationInfo .
+
+wstack:Version
+      a       owl:Class ;
+      rdfs:comment "A wicussstack:Version represents a concrete version of a software component."^^rdfs:Literal .
+
+wstack:isDeploymentStepOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:isDeploymentStepOf is a specific type of p-plan:isStepOfPlan linking a wstack:DeploymentStep to the wstack:DeploymentPaln that it belongs to."^^rdfs:Literal ;
+      rdfs:domain wstack:DeploymentStep ;
+      rdfs:range wstack:DeploymentPlan ;
+      rdfs:subPropertyOf p-plan:isStepOfPlan .
+
+wstack:hasVersion
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "wstack:hasVersion links a wstack:SoftwareComponent to the its wstack:Version"^^rdf:XMLLiteral ;
+      rdfs:domain wstack:SoftwareComponent ;
+      rdfs:range wstack:Version .
+
+wstack:SoftwareStack
+      a       owl:Class ;
+      rdfs:comment "A wstack:SoftwareStack represents a set of software components that support the execution of a certain set of tasks of a workflow."^^rdfs:Literal .
+
+wstack:NotOpenLicense
+      a       owl:Class ;
+      rdfs:comment "A wstack:NotOpenLicense represents the set of licenses that restricts the usage of a software component, subject to certain conditions."^^rdfs:Literal ;
+      rdfs:subClassOf wstack:License ;
+      owl:disjointWith wstack:OpenLicense .
+
+wstack:isDeploymentPlanOf
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:hasSoftwareComponent links a wstack:DeploymentPlan to its corresponding wstack:SofwareComponent."^^rdfs:Literal ;
+      rdfs:domain wstack:DeploymentPlan ;
+      rdfs:range wstack:SoftwareComponent .
+
+wstack:ConfigurationParameter
+      a       owl:Class ;
+      rdfs:comment "A wstack:ConfigurationParameter is a specific type of p-plan:Variable. It represents a piece of the configuration information of a deployment step."^^rdfs:Literal ;
+      rdfs:subClassOf p-plan:Variable .
+
+wstack:hasDeploymentScript
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "wstack:hasDeploymentScript links a wstack:DeploymentStep to a wstack:DeploymentScript that is invoked for executing the deployment step."^^rdf:XMLLiteral ;
+      rdfs:domain wstack:DeploymentStep ;
+      rdfs:range wstack:DeploymentScript .
+
+wstack:requiresHigherVersion
+      a       owl:ObjectProperty ;
+      rdfs:comment "wstack:requiresVersion links a wstack:SoftwareComponent to the minimun  wstack:Version required by this component on the context of a workflow. A wstack:SoftwareComponent then required the defined wstack:Version or a higher one." ;
+      rdfs:subPropertyOf wstack:requiresVersion .
+
+wstack:parameterValue
+      a       owl:DatatypeProperty ;
+      rdfs:comment "wstack:parameterValue defines the value of a parameter."^^rdfs:Literal ;
+      rdfs:domain wstack:ConfigurationParameter ;
+      rdfs:range rdfs:Literal .
+
+wstack:DeploymentPlan
+      a       owl:Class ;
+      rdfs:comment "A wstack:DeploymentPlan is a specific type of p-plan:Plan. It aggregates the set of steps to be performed in order to deploy a software component."^^rdfs:Literal ;
+      rdfs:subClassOf p-plan:Plan .
+
+wstack:parameterName
+      a       owl:DatatypeProperty ;
+      rdfs:comment "wstack:parameterName defines the name of a parameter, that is, the symbolic name or identifier of a stored value."^^rdfs:Literal ;
+      rdfs:domain wstack:ConfigurationParameter ;
+      rdfs:range rdfs:Literal .

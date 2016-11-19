@@ -1,0 +1,414 @@
+<h2  id="crossreference" class="list">Cross reference for  classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by .
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#AbstractWorkflow" title="http://purl.org/net/wicus-reqs#AbstractWorkflow">
+            <span>abstract workflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#ConcreteWorkflow" title="http://purl.org/net/wicus-reqs#ConcreteWorkflow">
+            <span>concrete workflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+            title="http://purl.org/net/wicus-reqs#ExecutionEnvironment">
+            <span>execution environment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#HardwareRequirements"
+            title="http://purl.org/net/wicus-reqs#HardwareRequirements">
+            <span>hardware requirements</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#RequirementLevel" title="http://purl.org/net/wicus-reqs#RequirementLevel">
+            <span>requirement level</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#SoftwareRequirements"
+            title="http://purl.org/net/wicus-reqs#SoftwareRequirements">
+            <span>software requirements</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">
+            <span>workflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#WorkflowStep" title="http://purl.org/net/wicus-reqs#WorkflowStep">
+            <span>workflow step</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#AbstractWorkflow">
+      <h3>abstract workflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#AbstractWorkflow</p>
+      <div class="comment">
+         <span class="markdown">A wreq:AbstractWorkflow is a specific type of wreq:Workflow in which at least one of its steps is not fully specified.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasConcreteWorkflow"
+               title="http://purl.org/net/wicus-reqs#hasConcreteWorkflow">has concrete workflow</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#ConcreteWorkflow">
+      <h3>concrete workflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#ConcreteWorkflow</p>
+      <div class="comment">
+         <span class="markdown">A wreq:ConcreteWorkflow is a specific type of wreq:Workflow in which all its steps are fully specified.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasConcreteWorkflow"
+               title="http://purl.org/net/wicus-reqs#hasConcreteWorkflow">has concrete workflow</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#ExecutionEnvironment">
+      <h3>execution environment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#ExecutionEnvironment</p>
+      <div class="comment">
+         <span class="markdown">A wreq:ExecutionEnvironment represents the computational resources that must be provided to support the execution of a workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#HardwareRequirements"
+               title="http://purl.org/net/wicus-reqs#HardwareRequirements">hardware requirements</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/net/wicus-reqs#SoftwareRequirements"
+               title="http://purl.org/net/wicus-reqs#SoftwareRequirements">software requirements</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasLevel" title="http://purl.org/net/wicus-reqs#hasLevel">has level</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#requiresExecutionEnvironment"
+               title="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">requires execution environment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#HardwareRequirements">
+      <h3>hardware requirements<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#HardwareRequirements</p>
+      <div class="comment">
+         <span class="markdown">A wreq:HardwareRequirements is a specific type of wreq:ExecutionEnvironment, representing the hardware resources that must be provided to support the execution of a workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+               title="http://purl.org/net/wicus-reqs#ExecutionEnvironment">execution environment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#RequirementLevel">
+      <h3>requirement level<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#RequirementLevel</p>
+      <div class="comment">
+         <span class="markdown">A wreq:RequirementLevel represents the degree of importance of a requirement.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasLevel" title="http://purl.org/net/wicus-reqs#hasLevel">has level</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#SoftwareRequirements">
+      <h3>software requirements<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#SoftwareRequirements</p>
+      <div class="comment">
+         <span class="markdown">A wreq:SoftwareRequirements is a specific type of wreq:ExecutionEnvironment, representing the software resources that must be provided to support the execution of a workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+               title="http://purl.org/net/wicus-reqs#ExecutionEnvironment">execution environment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#Workflow">
+      <h3>workflow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#Workflow</p>
+      <div class="comment">
+         <span class="markdown">A wreq:Workflow is a specific type of p-plan:Plan, representing a computational scientific workflow from the point of view of its infrastructure.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/p-plan#Plan">plan</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#AbstractWorkflow" title="http://purl.org/net/wicus-reqs#AbstractWorkflow">abstract workflow</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/net/wicus-reqs#ConcreteWorkflow" title="http://purl.org/net/wicus-reqs#ConcreteWorkflow">concrete workflow</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasSubworkflow" title="http://purl.org/net/wicus-reqs#hasSubworkflow">has subworkflow</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/net/wicus-reqs#requiresExecutionEnvironment"
+               title="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">requires execution environment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#hasSubworkflow" title="http://purl.org/net/wicus-reqs#hasSubworkflow">has subworkflow</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/net/wicus-reqs#isStepOfWorkflow" title="http://purl.org/net/wicus-reqs#isStepOfWorkflow">is step of workflow</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#WorkflowStep">
+      <h3>workflow step<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#WorkflowStep</p>
+      <div class="comment">
+         <span class="markdown">A wreq:WorkflowStep is a specific type of p-plan:Step, representing a single step of a workflow.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/p-plan#Step">step</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://purl.org/net/wicus-reqs#isStepOfWorkflow" title="http://purl.org/net/wicus-reqs#isStepOfWorkflow">is step of workflow</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#hasConcreteWorkflow"
+            title="http://purl.org/net/wicus-reqs#hasConcreteWorkflow">
+            <span>has concrete workflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#hasLevel" title="http://purl.org/net/wicus-reqs#hasLevel">
+            <span>has level</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#hasSubworkflow" title="http://purl.org/net/wicus-reqs#hasSubworkflow">
+            <span>has subworkflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#isStepOfWorkflow" title="http://purl.org/net/wicus-reqs#isStepOfWorkflow">
+            <span>is step of workflow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/net/wicus-reqs#requiresExecutionEnvironment"
+            title="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">
+            <span>requires execution environment</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#hasConcreteWorkflow">
+      <h3>has concrete workflow<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#hasConcreteWorkflow</p>
+      <div class="comment">
+         <span class="markdown">wreq:hasConcreteWorkflow links an wreq:AbstractWorkflow to the set of wreq:ConcreteWorkflow that implements it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#AbstractWorkflow" title="http://purl.org/net/wicus-reqs#AbstractWorkflow">abstract workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#ConcreteWorkflow" title="http://purl.org/net/wicus-reqs#ConcreteWorkflow">concrete workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#hasLevel">
+      <h3>has level<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#hasLevel</p>
+      <div class="comment">
+         <span class="markdown">wreq:hasLevel links a wreq:ExecutionEnvironment to its corresponding wreq:RequirementLevel.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+                  title="http://purl.org/net/wicus-reqs#ExecutionEnvironment">execution environment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#RequirementLevel" title="http://purl.org/net/wicus-reqs#RequirementLevel">requirement level</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#hasSubworkflow">
+      <h3>has subworkflow<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#hasSubworkflow</p>
+      <div class="comment">
+         <span class="markdown">wreq:hasSubworkflow links a wreq:Workflow to the subworkflows that compose it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#isStepOfWorkflow">
+      <h3>is step of workflow<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#isStepOfWorkflow</p>
+      <div class="comment">
+         <span class="markdown">wreq:isStepOfWorkflow is a specific type of p-plan:isStepOfPlan that relates a wreq:WorkflowStep to the wreqs:Workflow that it belongs to.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://purl.org/net/p-plan#isStepOfPlan">is step of plan</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#WorkflowStep" title="http://purl.org/net/wicus-reqs#WorkflowStep">workflow step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/net/wicus-reqs#requiresExecutionEnvironment">
+      <h3>requires execution environment<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wicus-reqs#requiresExecutionEnvironment</p>
+      <div class="comment">
+         <span class="markdown">wreq:requiresExecutionEnvironment is a specific type of dcterms:requires that links a wreq:Worflow to the wreq:ExecutionEnvironment that must be available for executing it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#Workflow" title="http://purl.org/net/wicus-reqs#Workflow">workflow</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/net/wicus-reqs#ExecutionEnvironment"
+                  title="http://purl.org/net/wicus-reqs#ExecutionEnvironment">execution environment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div>

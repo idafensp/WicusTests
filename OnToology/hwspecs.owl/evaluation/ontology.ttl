@@ -1,0 +1,108 @@
+@prefix :        <http://purl.org/net/wicus-hwspecs#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix wicus-hwspecs:  <http://purl.org/net/wicus-hwspecs#> .
+
+terms:license
+      a       owl:AnnotationProperty .
+
+wicus-hwspecs:unit
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "whw:unit defines the unit of measurement of a whw:Feature"^^rdfs:Literal ;
+      rdfs:domain wicus-hwspecs:Feature ;
+      rdfs:range rdfs:Literal .
+
+vann:preferredNamespaceUri
+      a       owl:AnnotationProperty .
+
+<http://purl.org/net/wicus-hwspecs>
+      a       owl:Ontology ;
+      dc:creator "http://delicias.dia.fi.upm.es/~isantana/"^^xsd:anyURI ;
+      dc:title "The WICUS Hardware Specs ontology"@en ;
+      terms:created "2013-06-14"^^xsd:date ;
+      terms:description "The WICUS Hardware Specs ontology is describes the hardware characteristics of a computational infrastructure and the hardware requirements of a software component. This ontology is part of the WICUS Ontology network." ;
+      terms:license "http://creativecommons.org/licenses/by-nc-sa/2.0/"^^xsd:anyURI ;
+      terms:modified "2013-07-08"^^xsd:date ;
+      vann:preferredNamespacePrefix
+              "whw" ;
+      vann:preferredNamespaceUri
+              "http://purl.org/net/wicus-hwspecs#" ;
+      owl:versionInfo "2.0" .
+
+wicus-hwspecs:hasHardwareComponent
+      a       owl:ObjectProperty ;
+      rdfs:comment "whw:hasHardwareComponent links a whw:HardwareSpec to the set of whw:HardwareComponent that compose it."^^rdfs:Literal ;
+      rdfs:domain wicus-hwspecs:HardwareSpec ;
+      rdfs:range wicus-hwspecs:HardwareComponent .
+
+wicus-hwspecs:HardwareSpec
+      a       owl:Class ;
+      rdfs:comment "A whw:HardwareSpec represents the set of hardware capabilities of a computational resource."^^rdfs:Literal .
+
+wicus-hwspecs:hasFeature
+      a       owl:ObjectProperty ;
+      rdfs:comment "whw:hasFeature links a whw:HardwareComponent to a whw:Feature defining its capabilities."^^rdfs:Literal ;
+      rdfs:domain wicus-hwspecs:HardwareComponent ;
+      rdfs:range wicus-hwspecs:Feature .
+
+terms:created
+      a       owl:AnnotationProperty .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+wicus-hwspecs:Network
+      a       owl:Class ;
+      rdfs:comment "A whw:Network is a specific type of whw:HardwareComponent representing the Network type of a computational resource."^^rdfs:Literal ;
+      rdfs:subClassOf wicus-hwspecs:HardwareComponent .
+
+wicus-hwspecs:Storage
+      a       owl:Class ;
+      rdfs:comment "A whw:Storage is a specific type of whw:HardwareComponent representing the storage capacity of a computational resource."^^rdfs:Literal ;
+      rdfs:subClassOf wicus-hwspecs:HardwareComponent .
+
+vann:preferredNamespacePrefix
+      a       owl:AnnotationProperty .
+
+owl:Thing
+      a       owl:Class .
+
+wicus-hwspecs:Feature
+      a       owl:Class ;
+      rdfs:comment "A whw:Feature represents a relevant characteristic of a component that define some of its capabilities."^^rdfs:Literal .
+
+wicus-hwspecs:HardwareComponent
+      a       owl:Class ;
+      rdfs:comment "A whw:HardwareComponent represents an element of the hardware stack of a computational resource."^^rdfs:Literal ;
+      rdfs:subClassOf owl:Thing .
+
+wicus-hwspecs:Memory
+      a       owl:Class ;
+      rdfs:comment "A whw:Memory is a specific type of whw:HardwareComponent representing the RAM Memory of a computational resource."^^rdfs:Literal ;
+      rdfs:subClassOf wicus-hwspecs:HardwareComponent .
+
+wicus-hwspecs:value
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "whw:unit defines the value of a whw:Feature"^^rdfs:Literal ;
+      rdfs:domain wicus-hwspecs:Feature ;
+      rdfs:range rdfs:Literal .
+
+wicus-hwspecs:CPU
+      a       owl:Class ;
+      rdfs:comment "A whw:CPU is a specific type of whw:HardwareComponent representing the CPU of a computational resource."^^rdfs:Literal ;
+      rdfs:subClassOf wicus-hwspecs:HardwareComponent .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+terms:description
+      a       owl:AnnotationProperty .

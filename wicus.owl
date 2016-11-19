@@ -45,7 +45,7 @@
             >The WICUS ontology network is a set of ontologies designed to represent the information about the computational infrastructure involved on the execution of computational scientific experiments modelled as scientific workflows.</terms:description>
         <owl:versionInfo>2.0</owl:versionInfo>
         <dc:title
-            >The Workflow Infrastructure Conservation Using Semantics ontology</dc:title>
+            >The Workflow Infrastructure Conservation Using Semantics super mega cool ontology</dc:title>
         <vann:preferredNamespaceUri
             >http://purl.org/net/wicus#</vann:preferredNamespaceUri>
         <owl:imports rdf:resource="http://purl.org/net/wicus-hwspecs"/>
